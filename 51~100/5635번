@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n, d, m, y, od, om, oy, yd, ym, yy;
+	string name, oldest, youngest;
+	cin >> n;
+	for (int i = 0; i < n; i++) {
+		cin >> name >> d >> m >> y;
+		if (i == 0) {
+			od = d; yd = d;
+			om = m; ym = m;
+			oy = y; yy = y;
+			oldest = name; youngest = name;
+		}
+		if (oy > y) {
+			od = d; om = m; oy = y; oldest = name;
+		}
+		else if(oy==y&&om>m){
+			od = d; om = m; oy = y; oldest = name;
+		}
+		else if (oy == y && om == m && od > d) {
+			od = d; om = m; oy = y; oldest = name;
+		}
+
+		if (yy < y) {
+			yd = d; ym = m; yy = y; youngest = name;
+		}
+		else if (yy == y && ym < m) {
+			yd = d; ym = m; yy = y; youngest = name;
+		}
+		else if (yy == y && ym == m && yd < d) {
+			yd = d; ym = m; yy = y; youngest = name;
+		}
+	}
+	cout << youngest << '\n' << oldest;
+}
