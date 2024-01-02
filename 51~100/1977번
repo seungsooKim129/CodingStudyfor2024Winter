@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int M, N, total=0, min=10001;
+	cin >> M >> N;
+	if (M > N) {
+		for (int i = 1; i <= 100; i++) {
+			if (i * i >= N && i * i <= M) {
+				if (i*i<min)min = i * i;
+				total += i * i;
+			}
+		}
+	}
+	else {
+		for (int i = 1; i <= 100; i++) {
+			if (i * i >= M && i * i <= N) {
+				if (i * i < min)min = i * i;
+				total += i * i;
+			}
+		}
+	}
+	if (total == 0) {
+		cout << "-1";
+	}
+	else {
+		cout << total << '\n' << min;
+	}
+}
