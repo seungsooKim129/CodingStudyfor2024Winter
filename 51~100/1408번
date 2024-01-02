@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int presentHour, presentMin, presentSec, pTotalTime;
+	int startHour, startMin, startSec, sTotalTime;
+	int leftTime, hour, min, sec;
+	scanf("%d:%d:%d", &presentHour, &presentMin, &presentSec);
+	scanf("%d:%d:%d", &startHour, &startMin, &startSec);
+	pTotalTime = presentHour * 3600 + presentMin * 60 + presentSec;
+	sTotalTime = startHour * 3600 + startMin * 60 + startSec;
+	if (pTotalTime < sTotalTime) {
+		leftTime = sTotalTime - pTotalTime;
+	}
+	else {
+		leftTime = 24*3600 - (pTotalTime - sTotalTime);
+	}
+	
+	hour = leftTime / 3600;
+	min = (leftTime - hour * 3600) / 60;
+	sec = leftTime % 60;
+	printf("%02d:%02d:%02d", hour, min, sec);
+}
