@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int N, total=1, x;
+    cin >> N;
+    for (int i = 1; i <= N; i++) {
+        cin >> x;
+        total += x - 1;
+    }
+    cout << total;   
+
+}
