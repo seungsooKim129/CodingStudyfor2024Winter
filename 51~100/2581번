@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int M, N, min=10000, cnt, sum=0;
+    cin >> M >> N;
+    for (int i = M; i <= N; i++) {    
+        cnt = 0;
+        for (int j = 1; j < i; j++) {
+            if (i % j == 0)cnt++;
+        }
+        if (cnt == 1) {
+            sum += i;
+            if (min > i)min = i;
+        }      
+    }   
+    if (sum == 0)cout << -1;
+    else  cout << sum << "\n" << min;
+}
