@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int N, X, n;
+    cin >> N >> X;
+    for (int i = 1; i <= N; i++) {
+        cin >> n;
+        if (n < X)cout << n << " ";
+    }    
+}
