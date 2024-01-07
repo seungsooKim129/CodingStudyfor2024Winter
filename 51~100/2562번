@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int N, idx, max;
+ 
+    for (int i = 1; i <=9; i++) {
+        cin >> N;
+        if (i == 1) {
+            max = N;
+            idx = i;
+        }
+        if (max < N) {
+            max = N;
+            idx = i;
+        }
+    }   
+    cout << max << "\n" << idx;
+}
