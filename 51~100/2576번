@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int N, total=0, min=100;
+ 
+    for (int i = 1; i <=7; i++) {
+        cin >> N;
+        if (N % 2 == 1) {
+            total += N;
+            if (N < min)min = N;
+        }
+        
+    }   
+    if (total == 0)cout << -1;
+    else cout << total << "\n" << min;
+}
