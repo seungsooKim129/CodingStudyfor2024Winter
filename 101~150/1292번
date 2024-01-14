@@ -1,0 +1,18 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+    int A, B, total = 0, cnt = 0;
+
+    cin >> A >> B;
+    for (int i = 1; i <= 45; i++) {
+        for (int j = 1; j <= i; j++) {
+            cnt++;
+            if (cnt > B)break;
+            if (cnt >= A && cnt <= B)total += i;
+
+        }
+    }
+    cout << total;
+
+}
