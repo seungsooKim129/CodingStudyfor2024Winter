@@ -1,0 +1,17 @@
+#include <iostream>
+#include <string>
+#include <bitset>
+using namespace std;
+int main() {
+    int N, v, n[100] = {}, cnt=0;
+    cin >> N;
+    for (int i = 0; i < N; i++) {
+        cin >> n[i];
+    }
+    cin >> v;
+    for (int i = 0; i < N; i++) {
+        if (n[i] == v)cnt++;
+    }
+    cout << cnt;
+
+}
