@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+    int h, m, l, c, s, total=0;
+    cin >> h >> m >> l >> c >> s;
+    if (c > s)total += s;
+    else total += c;
+
+    if (h > m) {
+        if (m > l) total += l;
+        else total += m;
+    }
+    else {
+        if (h > l) total += l;
+        else total += h;
+    }
+    cout << total - 50;
+}
